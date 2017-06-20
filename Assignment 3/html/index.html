@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 5.3 - Front End Web Development Fundamentals</title>
+<style>
+h1
+{
+color: Blue;
+font-size: 25px;
+font-family: arial;
+text-decoration: underline;
+}
+body
+{
+font-size: 18px;
+font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+    <h1>Javascript object literal tutorial!</h1><br>
+    <br>
+    <p id="demo"></p>
+    <br>
+    <p id ="lineBR">Adding new properties i.e. eyecolor and mother name of the student!<br></p>
+    <p id="newProp"></p>
+    <br>
+    <p>Deleted Address property!</p>
+    <script type="text/javascript">
+    	var demoOBj={StudentName:"Amit",DOB:"10/10/1980",Skills:"Web Development",Address:{city:"Thane",state:"Maharashtra",country:"India",pincode:400001}};
+    	document.getElementById("demo").innerHTML="Name of the student: "+demoOBj.StudentName+"<br>"+"DOB: "+demoOBj.DOB+"<br>"+
+    	"Skills: "+demoOBj.Skills+"<br>"+"Address: "+demoOBj.Address.city+","+demoOBj.Address.state+","+demoOBj.Address.country+","+demoOBj.Address.pincode+"<br>"+"<br>";
+    	demoOBj.eyecolor="Black";
+    	demoOBj.motherName="Mummy";
+document.getElementById("newProp").innerHTML="New properties have been added:<br>"+"eyecolor: "+demoOBj.eyecolor+"<br"+"Mother's name: "+demoOBj.motherName+"<br>";
+delete demoOBj.Address;
+alert("Address: "+demoOBj.Address);
+    </script>
+</body>
+</html>
